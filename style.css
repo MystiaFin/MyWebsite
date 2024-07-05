@@ -9,7 +9,7 @@
 body {
     font-family: 'Inconsolata', sans-serif;
     background-color: #FFEFF0;
-    font-size: 20px;
+    font-size: 19px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,7 +214,7 @@ nav .link a:hover {
 .main ul {
     text-decoration: none;
     list-style: none;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
 
 }
 

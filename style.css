@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', sans-serif;
+    background-color: #FFEFF0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+nav {
+    margin: 0;
+    width: 100%;
+    max-width: 1800px;
+    padding: 1rem 1rem;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    position: fixed;
+    z-index: 1000;
+    list-style: none;
+    text-decoration: none;
+}
+.link {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-links .button {
+    list-style: none;
+}
+
+
+.side-nav-links {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 4rem 2rem;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #FFEFF0;
+    transition: right 0.3s ease-in-out; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav-links.open {
+    right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.open {
+    opacity: 1;
+}
+
+nav .link a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    z-index: 5000;
+    transition: color 0.2s ease 0.2s;
+}
+
+.side-nav-links .link {
+    position: relative;
+    z-index: 2001;
+}
+
+.side-nav-links .link a {
+    position: relative;
+    z-index: 2002;
+}
+
+nav .link a::after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+nav .link a:hover::after {
+    height: 100%;
+}
+
+nav .link a:hover {
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.logo {
+    max-width: 125px;
+    padding-bottom: 50px;
+}
+
+.content {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.content .header {
+    font-weight: 350;
+    padding-bottom: 25px;
+}
+
+.surname {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    display: inline-block;
+    font-weight: 550;
+}
+    
+.realname {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.surname::after,
+.realname::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.surname:hover::after,
+.realname:hover::after {
+    width: 100%;
+}
+
+.surname:hover,
+.realname:hover {
+    color: black;
+}
+
+.content p {
+    padding-bottom: 40px;
+}
+
+.main .header {
+    font-weight: 400;
+    padding-bottom: 2px;
+    font-size: 30px;
+}
+
+.main ul {
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 10rem;
+
+}
+
+.main .link {
+    display: flex;
+    padding-bottom: 12px;
+    gap: 10px;
+}
+
+.main .link a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    display: inline-block;
+    z-index: 1;
+    transition: color 0.2s ease 0.2s;
+}
+
+.main .link a::after {
+    content: "";
+    position: absolute;
+    height: 0.1em;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+.main .link a:hover::after {
+    height: 100%;
+}
+
+.main .link a:hover {
+    color: white;
+}
+
+.contact .social-link {
+    display: flex;
+    padding-bottom: 12px;
+    gap: 10px;
+}
+
+.contact .social-link a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    display: inline-block;
+    z-index: 1;
+    transition: color 0.2s ease 0.2s;
+}
+
+.contact .social-link a::after {
+    content: "";
+    position: absolute;
+    height: 0.1em;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+.contact .social-link a:hover::after {
+    height: 100%;
+}
+
+.contact .social-link a:hover {
+    color: white;
+}
+
+.contact .header {
+    font-weight: 350;
+    padding-bottom: 5px;
+}
+
+/* Toggle button styles */
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001; /* Ensure it's above other content */
+    color: #333;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        padding: 20px;
+    }
+
+    .main .header {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+

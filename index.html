@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>MystiaFin's Site</title>
+    </head>
+    <body>
+        <div class="overlay" onclick="hideSidebar()"></div>
+            <nav id="navbar">
+                <ul class="side-nav-links">
+                    <li class="link"><a href="#" onclick="scrollToTop(); return false;">Home</a></li>
+                    <li class="link"><a href="#" onclick="scrollToBottom(); return false;">Contact Me</a></li>
+                    <li class="close-btn" onclick="hideSidebar()"><i class="ri-close-line"></i></li>
+                </ul>
+                <ul class="nav-links">
+                    <li class="button" onclick="toggleSidebar()"><i class="ri-menu-3-line"></i></li>
+                </ul>
+            </nav>
+        <header class="container">
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <div class="content">
+                <h2 class="header">
+                    Hi, I'm <span class="surname">MystiaFin</span>
+                </h2>
+                <p>
+                    And my real name is <span class="realname">Steven Lim</span>. I'm a second-year Computer Science student 
+                    in Indonesia and I've begin learning programming since 2 years ago. 
+                    The language I started with was Pascal, then moved on to Python, C++, Java,
+                    and also web development utilizing HTML, CSS, and JavaScript.
+                    <br><br>In addition, I've been doing 3D rendering as a hobby for the past 
+                    three years with software called Blender.
+                </p>
+            </div>
+            <div class="main">
+                <h2 class="header">Related Works:</h2>
+                <ul>
+                    <li class="link"><a href="https://www.instagram.com/p/CuBxtldxBO7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Kitchen Interior Design</a></li>
+                    <li class="link"><a href="https://www.instagram.com/p/C2ox06trJRv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Cyberpunk Alleyway Render</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2 class="header">Contact Me:</h2>
+                <div class="social-link">
+                    <i class="ri-instagram-line"></i>
+                    <span class="link"><a href="https://instagram.com/stvnzey" target="__blank">@stvnzey</a></span>
+                </div>
+                <div class="social-link">
+                    <i class="ri-github-fill"></i><span class="link">
+                    <a href="https://github.com/MystiaFin" target="__blank">MystiaFin</a></span>
+                </div>
+                <div class="social-link">
+                    <i class="ri-discord-fill"></i>
+                    mxtchayeaz
+                </div>
+                <div class="social-link">
+                    <i class="ri-mail-line"></i>
+                    <a href="mailto:mystiafin@gmail.com">mystiafin@gmail.com</a>
+                </div>
+            </div>
+        </header>
+        <script src="script.js"></script>
+    </body>
+</html>
